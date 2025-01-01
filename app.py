@@ -29,7 +29,23 @@
 # Pythagoras theorem
 # a = float(input("Enter side A: "))
 # b = float(input("Enter side B: "))
-
 # c = math.sqrt(pow(a, 2) + pow(b, 2))
-
 # print(f"Side C = {c}")
+
+# if statements
+# name = input("Enter your name: ")
+# if name == "":
+#    print("Please enter your name!")
+# else:
+#    print(f"Hello {name}")
+# online = True
+# if online:
+#    print("This user is online.")
+# else:
+#    print("This user is offline.")
+
+# Logical operators = evaluate multiple conditions (or, and, not)
+#                     or = at least one condition must be True
+#                     and = both conditions must be True
+#                     not = inverts the condition (not False, not True)
+
