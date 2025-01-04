@@ -145,3 +145,10 @@
 #     print(f"{num} is not valid")
 #     num = int(input("Enter a number between 1 and 10: "))
 # print(f"Your number is {num}.")
+
+# for loops = execute a block of code a fixed number of times.
+#             You can iterate over a range, string, sequence etc.
+
+# nested loop = A loop within another loop (outer, inner)
+#               outer loop:
+#                   inner loop:
