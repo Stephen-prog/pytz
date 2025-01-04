@@ -68,7 +68,6 @@
 
 # name = input("Enter your full name: ")
 # phone_number = input("Enter your Phone Number: ")
-
 # result = len(name)
 # result = name.find("o")
 # result = name.rfind("q")
@@ -99,7 +98,6 @@
 # print(credit_number)
 
 # format specifiers = {value:flags} format a value based on what flags are inserted
-
 # .(number)f = round to that many decimal places (fixed point)
 # :(number) = allocate that many spaces
 # : 03 = allocate that many spaces
@@ -120,7 +118,6 @@
 # print(f"Price 3 is €{price3:+,.2f}")
 
 # while loop = execute some code WHILE some condition remains true
-
 # name = input("Enter your name: ")
 # while name == "":
 #     print("Please enter your name.")
@@ -140,7 +137,6 @@
 # print("Tschuss! ")
 
 # num = int(input("Enter a number between 1 and 10: "))
-
 # while 1 < num > 10:
 #     print(f"{num} is not valid")
 #     num = int(input("Enter a number between 1 and 10: "))
@@ -152,3 +148,24 @@
 # nested loop = A loop within another loop (outer, inner)
 #               outer loop:
 #                   inner loop:
+
+# rows = int(input("Enter the number of rows: "))
+# columns = int(input("Enter the number of columns: "))
+# symbol = input("Enter a symbol to use: ")
+# for x in  range(rows):
+#     for y in range(columns):
+#         print(symbol, end=" ")
+#     print()
+
+# collection = single "variable" used to store multiple values
+#   List  = [] ordered or changeable. Duplicate OK
+#   Set   = {} unordered and immutable, but Add/Remove OK. NO duplicates
+#   Tuple = () ordered and unchangeable. Duplicates OK. FASTER
+
+# fruits = ("apple", "orange", "banana", "pineapple")
+# print(dir(fruits))
+# print(help(fruits))
+# print(len(fruits))
+# print("apple" in fruits)
+# print(fruits.index("apple"))
+# print(fruits.count("banana"))
