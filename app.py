@@ -169,3 +169,21 @@
 # print("apple" in fruits)
 # print(fruits.index("apple"))
 # print(fruits.count("banana"))
+
+# 2dlist = [list1, list2, list3]
+# groceries = [["apple", "orange", "banana", "mango"],
+#              ["broccoli", "carrots", "spinach"],
+#              ["chicken", "fish", "turkey"]]
+# for grocery in groceries:
+#     for item in grocery:
+#         print(item, end=" ")
+#     print()
+
+num_pad = ((1, 2, 3),
+           (4, 5, 6),
+           (7, 8, 9),
+           ("*", 0, "#"))
+for row in num_pad:
+    for num in row:
+        print(num, end=" ")
+    print()
