@@ -190,3 +190,47 @@
 
 # dictionary = a collection of {key:value} pairs
 #              ordered and changeable. No duplicates
+
+# capitals = {"Nigeria": "Abuja",
+#             "Ghana": "Accra",
+#             "Germany": "Berlin",
+#             "Japan": "Tokyo"}
+
+# print(dir(capitals))
+# print(help(capitals))
+# print(capitals.get("Nigeria"))
+
+# if capitals.get("China"):
+#     print(f"The capital is {capitals.get("Ghana")}.")
+# else:
+#     print("Capital not found.")
+# capitals.update({"Russia": "Moscow"})
+# capitals.update({"Japan": "Osaka"})
+# capitals.pop("Ghana")
+# capitals.popitem()
+# capitals.clear()
+
+# keys = capitals.keys()
+# for key in capitals.keys():
+#     print(key)
+
+# values = capitals.values()
+# for value in capitals.values():
+#     print(value)
+
+# items = capitals.items()
+# for key, value in capitals.items():
+#     print(f"{key}: {value}")
+
+# Random numbers
+# import random
+# low = 1
+# high = 100
+# options = ("rock", "paper", "scissors")
+# cards = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"]
+# number = random.randint(low, high) prints any random int between low and high
+# number = random.random() prints any random float between 0 and 1
+# option = random.choice(options) prints any random element from tuple or maybe list
+# random.shuffle(cards)
+# print(cards)
+# print(help(random)) prints all random methods
