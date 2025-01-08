@@ -234,3 +234,43 @@
 # random.shuffle(cards)
 # print(cards)
 # print(help(random)) prints all random methods
+
+# function = A block of reusable code
+#            place () after the function name to invoke it
+
+# def display_invoice(username, amount, due_date):
+#     print(f"Hello {username}")
+#     print(f"Your bill of {amount:.2f} is due: {due_date}.")
+# display_invoice("Collin", 10.99, "12/12/2015")
+
+# return = statement used to end a function
+#          and send a result back to the caller
+
+# def add(x, y):
+#     z = x + y
+#     return z
+# def subtract(x, y):
+#     z = x - y
+#     return z
+# def multiply(x, y):
+#     z = x * y
+#     return z
+# def divide(x, y):
+#     z = x / y
+#     return z
+# print(add(4, 5))
+# print(subtract(16, 9))
+# print(multiply(7, 9))
+# print(divide(785, 5))
+# def create_name(firstname, lastname):
+#     firstname = firstname.capitalize()
+#     lastname = lastname.capitalize()
+#     return firstname + " " + lastname
+# full_name = create_name("christian", "micheal")
+# print(full_name)
+
+
+# default arguments = A default value for certain parameters
+#                     default is used when that argument is omitted
+#                     make your functions more flexible, reduces number of arguments
+#                     1. positional, 2. DEFAULT, 3. keyword, 4. arbitrary
