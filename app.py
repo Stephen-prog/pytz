@@ -273,7 +273,7 @@
 # default arguments = A default value for certain parameters
 #                     default is used when that argument is omitted
 #                     make your functions more flexible, reduces number of arguments
-#                     1. positional, 2. DEFAULT, 3. keyword, 4. arbitrary
+#                     1. positional 2. DEFAULT 3. keyword 4. arbitrary
 
 # def net_price(list_price, discount = 0, tax = 0.05):
 #     return list_price * (1 - discount) * (1 + tax)
@@ -293,4 +293,38 @@
 # keyword arguments = an argument preceded by an identifier
 #                     helps withs readability
 #                     order of arguments doesn't matter
-#                     1. positional, 2. DEFAULT, 3. keyword, 4. arbitrary
+#                     1. positional 2. default 3. KEYWORD 4. arbitrary
+#def get_phone(country, area, first, last):
+#     return f"{country}-{area}-{first}-{last}"
+# phone_num = get_phone(country=49, area=163, first=1234, last=3142)
+# print(phone_num)
+
+
+# *args    = allows you to pass multiple non-key arguments
+# **kwargs = allows you to pass multiple keyword-arguments
+#            * unpacking operator
+#            1. positional 2. default 3. keyword 4. ARBITRARY
+
+# def display_name(*args):
+#     for arg in args:
+#         print(arg, end=" ")
+# display_name("Lionel","Andreas","Messi")
+
+# def print_address(**kwargs):
+#         for key, value in kwargs.items():
+#                 print(f"{key}: {value}")
+# print_address(street= "Ortstraße",
+#               apt= "68B",
+#               city= "Hornbach",
+#               state= "Birkenau",
+#               zip= "69488")
+
+def shipping_label(*args, **kwargs):
+        pass
+shipping_label("Herr", "Jeff", "Chilaka-Ukpo",
+               street="Ortstraße",
+               apt= "68B",
+               city= "Hornbach",
+               state= "Birkenau",
+               zip= "69488"
+               )
