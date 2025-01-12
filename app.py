@@ -319,23 +319,46 @@
 #               state= "Birkenau",
 #               zip= "69488")
 
-def shipping_label(*args, **kwargs):
-        for arg in args:
-            print(arg, end=" ")
-        print()
-        if "apt" in kwargs:
-            print(f"{kwargs.get('street')} {kwargs.get('apt')}")
-        elif "pobox" in kwargs:
-            print(f"{kwargs.get('street')}")
-            print(f"{kwargs.get('pobox')}")
-        else:
-            print(f"{kwargs.get('street')}")
-        print(f"{kwargs.get('city')} {kwargs.get('state')}, {kwargs.get('zip')}")
+# def shipping_label(*args, **kwargs):
+#         for arg in args:
+#             print(arg, end=" ")
+#         print()
+#         if "apt" in kwargs:
+#             print(f"{kwargs.get('street')} {kwargs.get('apt')}")
+#         elif "pobox" in kwargs:
+#             print(f"{kwargs.get('street')}")
+#             print(f"{kwargs.get('pobox')}")
+#         else:
+#             print(f"{kwargs.get('street')}")
+#         print(f"{kwargs.get('city')} {kwargs.get('state')}, {kwargs.get('zip')}")
 
-shipping_label("Herr", "Dirk", "Müller",
-               street="Ortstraße",
-               apt= "68B",
-               city= "Hornbach",
-               state= "Birkenau",
-               zip= "69488"
-               )
+# shipping_label("Herr", "Dirk", "Müller",
+#                street="Ortstraße",
+#                apt= "68B",
+#                city= "Hornbach",
+#                state= "Birkenau",
+#                zip= "69488"
+#                )
+
+
+# Iterables = An object/collection that can return its elements one at a time,
+#             allowing it to be iterated over in a loop
+
+# Membership operators = used to test whether a value or variable is found in a sequence
+#                        (string, list, tuple, set, or dictionary)
+#                        1. in
+#                        2. not in
+
+# word = "BANANA"
+# letter = input("Guess a letter in the secret word: ")
+# if letter in word.lower():
+#     print(f"{letter} is in the secret word.")
+# else:
+#     print(f"{letter} not found in secret word.")
+
+# students = {"Lawrence", "Uche", "Chima", "Jerry"}
+# student = input("Enter the student name: ")
+# if student not in students:
+#     print(f"{student} was not found.")
+# else:
+#     print(f"{student} is a student.")
