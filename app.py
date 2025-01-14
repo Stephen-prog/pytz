@@ -344,6 +344,7 @@
 # Iterables = An object/collection that can return its elements one at a time,
 #             allowing it to be iterated over in a loop
 
+
 # Membership operators = used to test whether a value or variable is found in a sequence
 #                        (string, list, tuple, set, or dictionary)
 #                        1. in
@@ -362,3 +363,29 @@
 #     print(f"{student} was not found.")
 # else:
 #     print(f"{student} is a student.")
+
+# grades = {"Sara": "A",
+#           "Ron": "B",
+#           "Optimus": "A",
+#           "Harry": "C",
+#           "Joey": "D"}
+# student = input("Enter the name of a student: ")
+# if student in grades:
+#     print(f"{student}'s grade is {grades[student]}.")
+# elif student not in grades:
+#     print(f"{student}'s grade not found.")
+
+# email = "yoohoo@gmail.com"
+# if "@" in email and "." in email:
+#     print("Valid email")
+# else:
+#     print("Invalid email")
+
+
+# List comprehension = A concise way to create lists in python
+#                      Compact and easier to read than traditional loops
+#                      [expression for value in iterable if condition]
+
+doubles = [x * 2 for x in range(1, 11)]
+
+print(doubles)
