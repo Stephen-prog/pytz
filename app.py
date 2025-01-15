@@ -445,5 +445,17 @@
 # module = a file containing code you want to include in your program
 #          use 'import' to include a module (built-in or your own)
 #          useful to break up a large program reusable separate files
+# print(help("modules")) to view all available modules
 
+
+# variable scope = where a variable is visible and accessible
+# scope resolution = (LEGB) local -> Enclosed -> Global -> Built-in
+
+
+# if__name__ = __main__: (this script can be imported OR run standalone)
+#                         Functions and classes in this module can be reused
+#                         without the main block of code executing
+
+# ex. library = Import library for functionality
+#               When running library directly, display a help page
 
