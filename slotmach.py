@@ -8,3 +8,15 @@ def print_row():
 
 def get_payout():
     pass
+
+def main():
+    balance = 100
+
+    print("************************")
+    print("Welcome to Python Slots!")
+    print("************************")
+    print("Symbols: 🍒 🍉 🍋 🛎️ ⭐")
+    print("************************")
+
+if __name__ == '__main__':
+    main()
