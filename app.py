@@ -465,16 +465,12 @@
 #          You need a "class" to create many objects
 
 # class = (blueprint) used to design the structure and the layout of an object
-class Car:
-    def __init__(self, make, model, year, color, for_sale):
-        self.make = make
-        self.model = model
-        self.year = year
-        self.color = color
-        self.for_sale = for_sale
+from car import Car
 
 car1 = Car("Mercedes-Benz", "S-Class", 2018, "white", False)
-print(car1.make)
-print(car1.model)
-print(car1.year)
-print(car1.color)
+car2 = Car("BMW", "X5", 2020, "silver", True)
+car3 = Car("Ferarri", "812", 2020, "black", False)
+
+car1.info()
+car2.buy()
+car3.drive()
