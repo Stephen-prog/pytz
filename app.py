@@ -465,12 +465,16 @@
 #          You need a "class" to create many objects
 
 # class = (blueprint) used to design the structure and the layout of an object
-from car import Car
+# from car import Car
 
-car1 = Car("Mercedes-Benz", "S-Class", 2018, "white", False)
-car2 = Car("BMW", "X5", 2020, "silver", True)
-car3 = Car("Ferarri", "812", 2020, "black", False)
+# car1 = Car("Mercedes-Benz", "S-Class", 2018, "white", False)
+# car2 = Car("BMW", "X5", 2020, "silver", True)
+# car3 = Car("Ferarri", "812", 2020, "black", False)
+# car1.info()
+# car2.buy()
+# car3.drive()
 
-car1.info()
-car2.buy()
-car3.drive()
+# class variables = Shared among all instances of a class
+#                   Defined outside the constructor
+#                   Allows you to share data among all objects created from that class
+
