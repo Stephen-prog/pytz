@@ -474,7 +474,32 @@
 # car2.buy()
 # car3.drive()
 
+
 # class variables = Shared among all instances of a class
 #                   Defined outside the constructor
 #                   Allows you to share data among all objects created from that class
 
+class Student:
+
+    class_year = 2025
+    num_students = 0
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        Student.num_students += 1
+
+student1 = Student("Jerry", 24)
+student2 = Student("Praise", 25)
+student3 = Student("Iragli", 40)
+student4 = Student("Chandler", 28)
+student5 = Student("Joey", 27)
+student6 = Student("Phoebe", 28)
+
+print(f"The graduating class of {Student.class_year} has {Student.num_students} students.")
+print(student1.name)
+print(student2.name)
+print(student3.name)
+print(student4.name)
+print(student5.name)
+print(student6.name)
