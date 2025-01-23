@@ -479,27 +479,25 @@
 #                   Defined outside the constructor
 #                   Allows you to share data among all objects created from that class
 
-class Student:
+# class Student:
 
-    class_year = 2025
-    num_students = 0
+#     class_year = 2025   class variable
+#     num_students = 0    class variable
 
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
-        Student.num_students += 1
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         Student.num_students += 1
 
-student1 = Student("Jerry", 24)
-student2 = Student("Praise", 25)
-student3 = Student("Iragli", 40)
-student4 = Student("Chandler", 28)
-student5 = Student("Joey", 27)
-student6 = Student("Phoebe", 28)
+# student1 = Student("Jerry", 24)
+# student2 = Student("Praise", 25)
+# student3 = Student("Iragli", 40)
+# student4 = Student("Chandler", 28)
+# student5 = Student("Joey", 27)
+# student6 = Student("Phoebe", 28)
+# print(f"The graduating class of {Student.class_year} has {Student.num_students} students.")
 
-print(f"The graduating class of {Student.class_year} has {Student.num_students} students.")
-print(student1.name)
-print(student2.name)
-print(student3.name)
-print(student4.name)
-print(student5.name)
-print(student6.name)
+
+# Inheritance = Allows a class to inherit attributes and methods from another class
+#               Helps with code reusability and extensibility
+#               class Child(Parent)
