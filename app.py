@@ -501,3 +501,50 @@
 # Inheritance = Allows a class to inherit attributes and methods from another class
 #               Helps with code reusability and extensibility
 #               class Child(Parent)
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True
+
+    def eat(self):
+        print(f"{self.name} is eating.")
+
+    def move(self):
+        print(f"{self.name} is running.")
+
+    def sleep(self):
+        print(f"{self.name} is asleep.")
+
+class Dog(Animal):
+    def speak(self):
+        print("WOOF!")
+
+class Cat(Animal):
+    def speak(self):
+        print("MEOW!")
+
+class Horse(Animal):
+    def speak(self):
+        print("NEIGH!")
+
+dog = Dog("Pablo")
+cat = Cat("Felix")
+horse = Horse("Henry")
+
+print(cat.name)
+print(cat.is_alive)
+cat.speak()
+cat.eat()
+cat.move()
+cat.sleep()
+
+
+
+
+
+
+
+
+
+
