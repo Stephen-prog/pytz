@@ -502,44 +502,43 @@
 #               Helps with code reusability and extensibility
 #               class Child(Parent)
 
-class Animal:
-    def __init__(self, name):
-        self.name = name
-        self.is_alive = True
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+#         self.is_alive = True
 
-    def eat(self):
-        print(f"{self.name} is eating.")
+#     def eat(self):
+#         print(f"{self.name} is eating.")
 
-    def move(self):
-        print(f"{self.name} is running.")
+#     def move(self):
+#         print(f"{self.name} is running.")
 
-    def sleep(self):
-        print(f"{self.name} is asleep.")
+#     def sleep(self):
+#         print(f"{self.name} is asleep.")
 
-class Dog(Animal):
-    def speak(self):
-        print("WOOF!")
+# class Dog(Animal):
+#     def speak(self):
+#         print("WOOF!")
 
-class Cat(Animal):
-    def speak(self):
-        print("MEOW!")
+# class Cat(Animal):
+#     def speak(self):
+#         print("MEOW!")
 
-class Horse(Animal):
-    def speak(self):
-        print("NEIGH!")
+# class Horse(Animal):
+#     def speak(self):
+#         print("NEIGH!")
 
-dog = Dog("Pablo")
-cat = Cat("Felix")
-horse = Horse("Henry")
-
-print(cat.name)
-print(cat.is_alive)
-cat.speak()
-cat.eat()
-cat.move()
-cat.sleep()
+# dog = Dog("Pablo")
+# cat = Cat("Felix")
+# horse = Horse("Henry")
 
 
+
+# multiple inheritance = inherit from more than one parent class
+#                        C(A, B)
+
+# multilevel inheritance = inherit from a parent which inherits from another parent
+#                          C(B) <- B(A) <- A
 
 
 
