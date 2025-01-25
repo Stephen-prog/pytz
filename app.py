@@ -469,7 +469,7 @@
 
 # car1 = Car("Mercedes-Benz", "S-Class", 2018, "white", False)
 # car2 = Car("BMW", "X5", 2020, "silver", True)
-# car3 = Car("Ferarri", "812", 2020, "black", False)
+# car3 = Car("Ferrari", "812", 2020, "black", False)
 # car1.info()
 # car2.buy()
 # car3.drive()
@@ -491,7 +491,7 @@
 
 # student1 = Student("Jerry", 24)
 # student2 = Student("Praise", 25)
-# student3 = Student("Iragli", 40)
+# student3 = Student("Clara", 40)
 # student4 = Student("Chandler", 28)
 # student5 = Student("Joey", 27)
 # student6 = Student("Phoebe", 28)
@@ -540,8 +540,28 @@
 # multilevel inheritance = inherit from a parent which inherits from another parent
 #                          C(B) <- B(A) <- A
 
+class Prey:
+    def flee(self):
+        print("This animal is fleeing.")
 
+class Predator:
+    def hunt(self):
+        print("This animal is hunting.")
 
+class Deer(Prey):
+    pass
+
+class Bear(Predator):
+    pass
+
+class Frog(Prey, Predator):
+    pass
+
+deer = Deer()
+bear = Bear()
+frog = Frog()
+
+bear.hunt()
 
 
 
