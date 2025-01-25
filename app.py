@@ -539,29 +539,38 @@
 
 # multilevel inheritance = inherit from a parent which inherits from another parent
 #                          C(B) <- B(A) <- A
+class Animal:
+    def __init__(self, name):
+        self.name = name
 
-class Prey:
+    def eat(self):
+        print(f"{self.name} is eating.")
+
+    def rest(self):
+        print(f"{self.name} is resting.")
+
+class Prey(Animal):
     def flee(self):
-        print("This animal is fleeing.")
+        print(f"{self.name} is fleeing.")
 
-class Predator:
+class Predator(Animal):
     def hunt(self):
-        print("This animal is hunting.")
+        print(f"{self.name} is hunting.")
 
 class Deer(Prey):
     pass
 
-class Bear(Predator):
+class Tiger(Predator):
     pass
 
 class Frog(Prey, Predator):
     pass
 
-deer = Deer()
-bear = Bear()
-frog = Frog()
+deer = Deer("Beefy")
+tiger = Tiger("Tyga")
+frog = Frog("Kermit")
 
-bear.hunt()
+tiger.hunt()
 
 
 
