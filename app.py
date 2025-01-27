@@ -539,40 +539,64 @@
 
 # multilevel inheritance = inherit from a parent which inherits from another parent
 #                          C(B) <- B(A) <- A
-class Animal:
-    def __init__(self, name):
-        self.name = name
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
 
-    def eat(self):
-        print(f"{self.name} is eating.")
+#     def eat(self):
+#         print(f"{self.name} is eating.")
 
-    def rest(self):
-        print(f"{self.name} is resting.")
+#     def rest(self):
+#         print(f"{self.name} is resting.")
 
-class Prey(Animal):
-    def flee(self):
-        print(f"{self.name} is fleeing.")
+# class Prey(Animal):
+#     def flee(self):
+#         print(f"{self.name} is fleeing.")
 
-class Predator(Animal):
-    def hunt(self):
-        print(f"{self.name} is hunting.")
+# class Predator(Animal):
+#     def hunt(self):
+#         print(f"{self.name} is hunting.")
 
-class Deer(Prey):
-    pass
+# class Deer(Prey):
+#     pass
+# class Tiger(Predator):
+#     pass
+# class Frog(Prey, Predator):
+#     pass
 
-class Tiger(Predator):
-    pass
+# deer = Deer("Beefy")
+# tiger = Tiger("Tyga")
+# frog = Frog("Kermit")
 
-class Frog(Prey, Predator):
-    pass
-
-deer = Deer("Beefy")
-tiger = Tiger("Tyga")
-frog = Frog("Kermit")
-
-tiger.hunt()
+#tiger.hunt()
 
 
+# super() = Function used ina child class to call methods from a parent class (superclass).
+#           Allows you t extend the functionality of the inherited methods
 
+class Shape:
+    def __init__(self, color, is_filled):
+        self.color = color
+        self.is_filled = is_filled
 
+class Circle(Shape):
+    def __init__(self, color, is_filled, radius):
+        super().__init__(color, is_filled)
+        self.radius = radius
 
+class Square(Shape):
+    def __init__(self, color, is_filled, width):
+        super().__init__(color, is_filled)
+        self.width = width
+
+class Triangle(Shape):
+    def __init__(self, color, is_filled, width, height):
+        super().__init__(color, is_filled)
+        self.width = width
+        self.height = height
+
+circle = Circle("grey", True, 3)
+
+print(circle.color)
+print(circle.is_filled)
+print(circle.radius)
