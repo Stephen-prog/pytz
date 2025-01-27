@@ -578,25 +578,45 @@ class Shape:
     def __init__(self, color, is_filled):
         self.color = color
         self.is_filled = is_filled
+    # USING METHOD OVERRIDING,
+    def describe(self):
+        print(f"It is a {self.color} and {'filled' if self.is_filled else 'not filled'}.")
+
 
 class Circle(Shape):
     def __init__(self, color, is_filled, radius):
         super().__init__(color, is_filled)
         self.radius = radius
 
+    def describe(self):
+        print(f"It is a circle with an area of {3.142 * self.radius * self.radius}cm^2")
+        # Extending the describe functionality from the parent class of shape
+        super().describe()
+
 class Square(Shape):
     def __init__(self, color, is_filled, width):
         super().__init__(color, is_filled)
         self.width = width
 
+    def describe(self):
+        print(f"It is a square with an area of {self.width * self.width}cm^2")
+        # Extending the describe functionality from the parent class of shape
+        super().describe()
+
 class Triangle(Shape):
-    def __init__(self, color, is_filled, width, height):
+    def __init__(self, color, is_filled, base, height):
         super().__init__(color, is_filled)
-        self.width = width
+        self.base = base
         self.height = height
 
-circle = Circle("grey", True, 3)
+    def describe(self):
+        print(f"It is a triangle with an area of {0.5 * self.base * self.height}cm^2")
+        # Extending the describe functionality from the parent class of shape
+        super().describe()
 
-print(circle.color)
-print(circle.is_filled)
-print(circle.radius)
+circle = Circle("grey", True, 3)
+square = Square("blue", False, 5)
+triangle = Triangle("green", True, 3, 2)
+
+square.describe()
+
