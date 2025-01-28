@@ -618,5 +618,5 @@ circle = Circle("grey", True, 3)
 square = Square("blue", False, 5)
 triangle = Triangle("green", True, 3, 2)
 
-square.describe()
+triangle.describe()
 
