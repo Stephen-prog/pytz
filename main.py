@@ -53,7 +53,7 @@
 #               "If it looks like a duck and quacks like a duck, it must be a duck."
 
 class Animal:
-    is_mammal = True
+    is_alive = True
 
 class Dog(Animal):
     def speak(self):
@@ -62,3 +62,15 @@ class Dog(Animal):
 class Cat(Animal):
     def speak(self):
         print("MEOW")
+
+class Car:
+    is_alive = False
+
+    def speak(self):
+        print("BEEP!")
+
+animals = [Dog(), Cat(), Car()]
+
+for animal in animals:
+    animal.speak()
+    print(animal.is_alive)
