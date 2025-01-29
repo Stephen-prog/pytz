@@ -83,26 +83,30 @@
 # Instance methods = Best for operations on instances of the class (objects)
 # Static methods = Best for utility functions that do not need access to class data
 
-class Employee:
+# class Employee:
 
-    def __init__(self, name, position):
-        self.name = name
-        self.position = position
+#     def __init__(self, name, position):
+#         self.name = name
+#         self.position = position
 
     # Instance method
-    def get_info(self):
-        return f"{self.name} = {self.position}"
+#     def get_info(self):
+#         return f"{self.name} = {self.position}"
 
-    @staticmethod
-    def is_valid_positions(position):
-        valid_positions = ["Manager", "Cashier", "Cook", "Waiter", "Janitor"]
-        return position in valid_positions
+#     @staticmethod
+#     def is_valid_positions(position):
+#         valid_positions = ["Manager", "Cashier", "Cook", "Waiter", "Janitor"]
+#         return position in valid_positions
 
-employee1 = Employee("Danny", "Manger")
-employee2 = Employee("Sandra", "Cashier")
-employee3 = Employee("Deborah", "Cook")
+# employee1 = Employee("Danny", "Manger")
+# employee2 = Employee("Sandra", "Cashier")
+# employee3 = Employee("Deborah", "Cook")
 
-print(Employee.is_valid_positions("Waiter"))
-print(employee1.get_info())
-print(employee2.get_info())
-print(employee3.get_info())
+# print(Employee.is_valid_positions("Waiter"))
+# print(employee1.get_info())
+# print(employee2.get_info())
+# print(employee3.get_info())
+
+
+# Class methods = Allow operations related to the class itself
+#                 Take (cls) as the first parameter, which represents the class itself
