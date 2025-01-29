@@ -52,25 +52,33 @@
 #               Object must have the minimum necessary attributes/methods
 #               "If it looks like a duck and quacks like a duck, it must be a duck."
 
-class Animal:
-    is_alive = True
+# class Animal:
+#     is_alive = True
 
-class Dog(Animal):
-    def speak(self):
-        print("WOOF")
+# class Dog(Animal):
+#     def speak(self):
+#         print("WOOF")
 
-class Cat(Animal):
-    def speak(self):
-        print("MEOW")
+# class Cat(Animal):
+#     def speak(self):
+#         print("MEOW")
 
-class Car:
-    is_alive = False
+# class Car:
+#     is_alive = False
 
-    def speak(self):
-        print("BEEP!")
+#     def speak(self):
+#         print("BEEP!")
 
-animals = [Dog(), Cat(), Car()]
+# animals = [Dog(), Cat(), Car()]
 
-for animal in animals:
-    animal.speak()
-    print(animal.is_alive)
+# for animal in animals:
+#     animal.speak()
+#     print(animal.is_alive)
+
+
+
+# Static methods = A method that belong to a class rather than any object from that class (instance)
+#                  Usually used for general utility functions
+
+# Instance methods = Best for operations on instances of the class (objects)
+# Static methods = Best for utility functions that do not need access to class data
