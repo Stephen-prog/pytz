@@ -148,7 +148,6 @@ print(Student.get_average_gpa())
 # Magic methods = Dunder methods (double underscore) __init__, __str__, __eq__
 #                 They are automatically called by many of Python's built-in operations.
 #                 They allow developers to define or customize the behaviour of objects
-
 """
 class Student:
 
@@ -173,6 +172,7 @@ print(student1 == student2)
 print(student1 > student2)
 """
 
+"""
 class Book:
 
     def __init__(self, title, author, num_pages):
@@ -214,5 +214,10 @@ book3 = Book("Dune Messiah", "Frank Herbert", 352)
 
 print(f"{book1['num_pages']} pages")
 print(book3['publisher'])
+"""
 
+
+# @property = Decorator used to define a method as a property (it can be accessed like an attribute)
+#             Benefit: Add additional logic when read, write, or delete attributes
+#             Gives you getter,setter, and deleter method
 
