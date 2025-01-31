@@ -277,15 +277,15 @@ del rectangle.height
 #             Pass the base function as an argument to the decorator
 
 def add_sprinkles(func):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         print("*You added sprinkles 🎉*")
-        func()
+        func(*args, **kwargs)
     return wrapper
 
 def add_fudge(func):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         print("*You added fudge 🍫*")
-        func()
+        func(*args, **kwargs)
     return wrapper
 
 @add_sprinkles
