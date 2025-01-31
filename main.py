@@ -278,12 +278,19 @@ del rectangle.height
 
 def add_sprinkles(func):
     def wrapper():
-        print("You added sprinkles 🎉")
+        print("*You added sprinkles 🎉*")
+        func()
+    return wrapper
+
+def add_fudge(func):
+    def wrapper():
+        print("*You added fudge 🍫*")
         func()
     return wrapper
 
 @add_sprinkles
-def get_ice_cream():
-    print("Here is your ice cream 🍨.")
+@add_fudge
+def get_ice_cream(flavor):
+    print(f"Here is your {flavor} ice cream 🍨.")
 
-
+get_ice_cream("vanilla")
