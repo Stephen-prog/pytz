@@ -574,6 +574,7 @@
 # super() = Function used ina child class to call methods from a parent class (superclass).
 #           Allows you t extend the functionality of the inherited methods
 
+"""
 class Shape:
     def __init__(self, color, is_filled):
         self.color = color
@@ -619,4 +620,4 @@ square = Square("blue", False, 5)
 triangle = Triangle("green", True, 3, 2)
 
 triangle.describe()
-
+"""
