@@ -315,3 +315,19 @@ except Exception:
 finally:
     print("Do some cleanup here")
 """
+
+# Python file detection
+
+import os
+
+file_path = "C:/Users/nicol/OneDrive/Desktop/test"
+
+if os.path.exists(file_path):
+    print(f"The location '{file_path}' exists")
+
+    if os.path.exists(file_path):
+        print("That is a file")
+    elif os.path.isdir(file_path):
+        print("THis is a directory")
+else:
+    print(f"Location not found")
