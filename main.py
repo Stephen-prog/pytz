@@ -318,6 +318,7 @@ finally:
 
 # Python file detection
 
+"""
 import os
 
 file_path = "C:/Users/nicol/OneDrive/Desktop/test"
@@ -331,3 +332,25 @@ if os.path.exists(file_path):
         print("THis is a directory")
 else:
     print(f"Location not found")
+"""
+
+
+
+# Python writing files (.txt, .json, .csv)
+
+import json
+
+employee = {
+    "name": "Peter Parker",
+    "age": "30",
+    "occupation": "Photographer"
+}
+
+file_path = "C:/Users/nicol/OneDrive/Desktop/output.json"
+
+try:
+    with open(file_path, "w") as file:
+        json.dump(employee, file, indent=4)
+        print(f"json file '{file_path}' was created")
+except FileExistsError:
+    print("That file already exists!")
