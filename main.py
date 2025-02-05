@@ -363,14 +363,15 @@ except FileExistsError:
 
 # Python reading files (.txt, .json, .csv)
 
-import json
+import csv
 
-file_path = "C:/Users/nicol/OneDrive/Desktop/input.json"
+file_path = "C:/Users/nicol/OneDrive/Desktop/input.csv"
 
 try:
     with open(file_path, "r") as file:
-        content = json.load(file)
-        print(content["name"])
+        content = csv.reader(file)
+        for line in content:
+            print(line)
 except FileNotFoundError:
     print("File was not found!")
 except PermissionError:
