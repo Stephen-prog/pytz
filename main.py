@@ -339,18 +339,20 @@ else:
 # Python writing files (.txt, .json, .csv)
 
 import json
+import csv
 
-employee = {
-    "name": "Peter Parker",
-    "age": "30",
-    "occupation": "Photographer"
-}
+employees = [["Name", "Age", "Occupation"],
+            ["Joe", 38, "Electrician"],
+            ["Kent", 47, "Mechanic"],
+            ["Elise", 30, "Receptionist"]]
 
-file_path = "C:/Users/nicol/OneDrive/Desktop/output.json"
+file_path = "C:/Users/nicol/OneDrive/Desktop/output.csv"
 
 try:
-    with open(file_path, "w") as file:
-        json.dump(employee, file, indent=4)
-        print(f"json file '{file_path}' was created")
+    with open(file_path, "w", newline="") as file:
+        writer = csv.writer(file)
+        for row in employees:
+            writer.writerow(row)
+        print(f"csv file '{file_path}' was created")
 except FileExistsError:
     print("That file already exists!")
