@@ -363,3 +363,13 @@ except FileExistsError:
 
 # Python reading files (.txt, .json, .csv)
 
+file_path = "C:/Users/nicol/OneDrive/Desktop/input.txt"
+
+try:
+    with open(file_path, "r") as file:
+        content = file.read()
+        print(content)
+except FileNotFoundError:
+    print("File was not found!")
+except PermissionError:
+    print("Permission Required to access this file!")
