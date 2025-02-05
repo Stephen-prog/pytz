@@ -363,8 +363,8 @@ except FileExistsError:
 
 # Python reading files (.txt, .json, .csv)
 
+"""
 import csv
-
 file_path = "C:/Users/nicol/OneDrive/Desktop/input.csv"
 
 try:
@@ -376,3 +376,26 @@ except FileNotFoundError:
     print("File was not found!")
 except PermissionError:
     print("Permission Required to access this file!")
+"""
+
+
+
+# Dates and times with python
+
+import datetime
+
+date = datetime.date(2025, 1, 2)
+today = datetime.date.today()
+
+time = datetime.time(12, 30, 10)
+jetzt = datetime.datetime.now()
+
+jetzt = jetzt.strftime("%H:%M:%S %m-%d-%Y")
+
+target_datetime = datetime.datetime(2030, 1, 1,00,00,00)
+current_datetime = datetime.datetime.now()
+
+if target_datetime < current_datetime:
+    print("Target date has passed")
+else:
+    print("Target date has NOT passed")
