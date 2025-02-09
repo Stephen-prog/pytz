@@ -406,3 +406,32 @@ else:
 # multithreading = Used to perform multiple tasks concurrently (multitasking)
 #                  Good for I/O bound tasks like reading files or fetching data from APIs
 #                  threading.Thread(target=my_function)
+
+import threading
+import time
+
+def walk_dog(first, last):
+    time.sleep(8)
+    print(f"{first} {last} has been walked.")
+
+def take_out_trash():
+    time.sleep(6)
+    print("The trash has been taken out.")
+
+def get_post():
+    time.sleep(3)
+    print("The Posts have been brought in.")
+
+chore1 = threading.Thread(target=walk_dog, args=("Pablo", "the Dog"))
+chore2 = threading.Thread(target=take_out_trash)
+chore3 = threading.Thread(target=get_post)
+
+chore1.start()
+chore2.start()
+chore3.start()
+
+chore1.join()
+chore2.join()
+chore3.join()
+
+print("All chores have been completed")
