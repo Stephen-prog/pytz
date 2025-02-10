@@ -470,15 +470,39 @@ if pokemon_info:
 
 # PyQt5 introduction
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+# from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QFont
+from PyQt5.QtCore import Qt
 
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("My first GUI")
+        # self.setWindowTitle("My first GUI")
         self.setGeometry(700, 300, 500,500)
-        self.setWindowIcon(QIcon("my_u.jpg"))
+        # self.setWindowIcon(QIcon("my_u.jpg"))
+
+        label = QLabel("Hello", self)
+        label.setFont(QFont("Arial", 30))
+        label.setGeometry(0, 0, 500, 100)
+        label.setStyleSheet("color: #301e1d;"
+                            "background-color: #1e9dba;"
+                            "font-weight: bold;"
+                            "font-style: italic;"
+                            "text-decoration: underline;")
+
+        # label.setAlignment(Qt.AlignTop) # VERTICALLY TO THE TOP
+        # label.setAlignment(Qt.AlignBottom) # VERTICALLY TO THE BOTTOM
+        # label.setAlignment(Qt.AlignVCenter) # VERTICALLY TO THE CENTER
+
+        # label.setAlignment(Qt.AlignRight) # HORIZONTALLY TO THE RIGHT
+        # label.setAlignment(Qt.AlignLeft) # HORIZONTALLY TO THE LEFT
+        # label.setAlignment(Qt.AlignHCenter) # HORIZONTALLY TO THE CENTER
+
+        # label.setAlignment(Qt.AlignHCenter | Qt.AlignTop) # CENTER & TOP
+        # label.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)  # CENTER & BOTTOM
+        # label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)  # CENTER & CENTER OR
+        # label.setAlignment(Qt.AlignCenter)  # CENTER & CENTER
 
 def main():
     app = QApplication(sys.argv)
