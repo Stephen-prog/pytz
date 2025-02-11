@@ -469,6 +469,7 @@ if pokemon_info:
 
 
 # PyQt5 introduction
+"""
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
 # from PyQt5.QtGui import QIcon
@@ -503,6 +504,42 @@ class MainWindow(QMainWindow):
         # label.setAlignment(Qt.AlignHCenter | Qt.AlignBottom)  # CENTER & BOTTOM
         # label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)  # CENTER & CENTER OR
         # label.setAlignment(Qt.AlignCenter)  # CENTER & CENTER
+
+def main():
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.show()
+    sys.exit(app.exec_())
+
+if __name__ == "__main__":
+    main()
+
+"""
+
+
+
+# PyQt5 images
+import sys
+from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtGui import QPixmap
+
+class MainWindow(QMainWindow):
+    def __init__(self):
+        super().__init__()
+        self.setGeometry(700, 300, 500, 500)
+
+        label = QLabel(self)
+        label.setGeometry(0, 0, 250, 150)
+
+        pixmap = QPixmap("wp6860440.jpg")
+        label.setPixmap(pixmap)
+
+        label.setScaledContents(True)
+
+        label.setGeometry((self.width() - label.width()) // 2,
+                          (self.height() - label.height()) // 2,
+                          label.width(),
+                          label.height())
 
 def main():
     app = QApplication(sys.argv)
