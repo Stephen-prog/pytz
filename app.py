@@ -622,3 +622,25 @@ triangle = Triangle("green", True, 3, 2)
 triangle.describe()
 """
 
+
+
+from PyQt5.QtCore import QTime, QLocale
+
+# Set the locale to US English (or another locale that uses AM/PM)
+locale = QLocale(QLocale.English, QLocale.UnitedStates)
+
+formats = [
+    "hh:mm:ss ap",
+    "hh:mm:ss AP",
+    "hh:mm:ss a",
+    "hh:mm:ss tt",
+    "hh:mm:ss zzz ap"
+]
+
+print("Testing different time formats:")
+for fmt in formats:
+    print(f"{fmt} ->", locale.toString(QTime.currentTime(), fmt))
+
+# Debugging output
+print("Current locale:", locale.name())
+print("Current time (default format):", QTime.currentTime().toString())
